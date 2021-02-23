@@ -1,3 +1,4 @@
+// 181-15-1814 ~ Hrithik Mojumdar
 // DOM Elements
 
 const valueEl = document.querySelector('.value');
@@ -25,12 +26,12 @@ const numberElArray = [
 ];
 
 
-// variables
+// For variable
 let valueStrInMemory = null;
 let operatorInMemory = null;
 
 
-// Functions
+// For Functions
 const getValueAsStr = () => valueEl.textContent.split(',').join('');
 
 const getValueAsNum = () => {
@@ -91,14 +92,13 @@ const handleOperatorClick = (operation) => {
   setStrAsValue('0');
 };
 
-// Add Event Listeners to functions
 acEl.addEventListener('click', () => {
   setStrAsValue('0');
   valueStrInMemory = null;
   operatorInMemory = null;
 });
 
-// add event listeners to operators
+// For Oerators
 additionEl.addEventListener('click', () => {
   handleOperatorClick('addition');
 });
@@ -120,7 +120,7 @@ equalEl.addEventListener('click', () => {
 });
 
 
-// Add Event Listeners to numbers and decimal
+// For Nmbers and Decimal
 for (let i=0; i < numberElArray.length; i++) {
   const numberEl = numberElArray[i];
   numberEl.addEventListener('click', () => {
